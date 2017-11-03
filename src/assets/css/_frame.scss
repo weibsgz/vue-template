@@ -1,0 +1,28 @@
+// 页面布局相关样式
+@import './mixin';
+@import "./variable";
+
+body {
+  transform-origin: 0 0;
+  width: 3840px;
+  height: 1080px;
+  //transform: scale3d(0.5, 0.5, 1);
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+// 框架整体布局
+.main, .wrapper {
+  @include flex(space-between);
+  padding: 70px 80px 70px;
+  height: calc(100% - 60px);
+  box-sizing: border-box;
+  .section {
+    // @include flex(flex-start, center, column);
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
